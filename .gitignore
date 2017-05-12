@@ -1,2 +1,4 @@
 /.htaccess
 /application/config/config.php
+/assets/images/annonces
+/application/config/database.php
