@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php
             foreach($pubs_vvb as $val){ ?>
                 <li>
-                    <a href="http://<?php echo site_url($val['link']); ?>">
+                    <a href="<?php echo site_url($val['link']); ?>">
                         <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
                     </a>
                 </li>
