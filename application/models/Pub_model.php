@@ -1,11 +1,22 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Pub_model extends CI_Model
 {
-    public function get_pub(){
+    public function get_pub($limit,$emplacement){
         $row = $this->db->select()
                     ->from('pubs')
                     ->where('active',1)
-                    ->limit(2)
+                    ->where('emplacement',$emplacement)
+                    ->limit($limit)
+                    ->order_by('title', 'RANDOM')
+                    ->get()
+                    ->result_array();
+        return $row;
+    }
+    public function get_pub_vvb($limit,$emplacement){
+        $row = $this->db->select()
+                    ->from('pubs_vvb')
+                    ->where('active',1)
+                    ->limit($limit)
                     ->order_by('title', 'RANDOM')
                     ->get()
                     ->result_array();

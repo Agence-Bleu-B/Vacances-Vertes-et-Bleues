@@ -31,18 +31,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>
         </article>
         <ul id="esp_pub">
-            <li>
-                <a href="<?php echo site_url('compte');?>" target="_blank">
-                    <?php echo img('pubs/10D-home2.png','bleuB');?>
-                </a>
-            </li>
-        <?php
-        foreach($pubs as $val){ ?>
-            <li>
-                <a href="http://<?php echo $val['link']; ?>" target="_blank">
-                    <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
-                </a>
-            </li>
+            <?php
+            foreach($pubs_vvb as $val){ ?>
+                <li>
+                    <a href="http://<?php echo $val['link']; ?>">
+                        <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
+                    </a>
+                </li>
+            <?php } 
+            foreach($pubs as $val){ ?>
+                <li>
+                    <a href="http://<?php echo $val['link']; ?>" target="_blank">
+                        <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
+                    </a>
+                </li>
         <?php } ?>
         </ul>
     </div>
