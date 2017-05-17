@@ -61,7 +61,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<button type="submit" class="btn btn-primary" name="connect">Connexion</button>
 			</fieldset>
 		</form>
-			<img src="<?php echo base_url().'assets/images/pubs/vvb-10D2.png';?>" class="baniere_register img-responsive">
+		<?php
+        foreach($pubs_vvb as $val){ 
+        	$sr = 'pub/';echo $sr;echo $val['file'];
+        	echo $sr .= $sr;
+        	$sr = img_url($sr);$sr;
+        	$image_properties = array(
+		        'src'   => $sr,
+		        'alt'   => 'pub vvb',
+		        'class' => 'img_responsive img_banner'); 
+	    	echo img($image_properties);
+        } ?>
 		</article>
 	</div>
 	</div>

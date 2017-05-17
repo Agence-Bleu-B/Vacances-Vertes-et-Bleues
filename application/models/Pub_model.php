@@ -16,6 +16,7 @@ class Pub_model extends CI_Model
         $row = $this->db->select()
                     ->from('pubs_vvb')
                     ->where('active',1)
+                    ->where('emplacement',$emplacement)
                     ->limit($limit)
                     ->order_by('title', 'RANDOM')
                     ->get()

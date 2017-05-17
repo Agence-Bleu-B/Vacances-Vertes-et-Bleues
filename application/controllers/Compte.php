@@ -11,6 +11,8 @@ class Compte extends CI_Controller {
         $data['title'] = 'vacances vertes et bleues, inscription/connexion';
         $data['description'] = 'Site de locations de vacances directement auprès des propriétaires et des campings. Aussi, un des derniers guide papier à être édité en France et en Belgique.';
         $connected = $this->session->userdata('connected');
+        $this->load->model('pub_model');
+        $data['pubs_vvb'] = $this->pub_model->get_pub_vvb(1,'login');
         $this->load->model('user_model');
         //traitement si demande de connection
         if ($this->input->post('connect') !== null)
