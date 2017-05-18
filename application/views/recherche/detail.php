@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-1">
                 <br><br>
-                <a class="btn btn-primary" href="#">< Retour</a>
+                <a class="btn btn-primary" href="<?php echo site_url('recherche');?>">< Retour</a>
                 <br><br>
             </div>
         </div>
@@ -12,9 +12,51 @@
         <div class="row">
 
             <div class="col-md-4">
-                <?php if ($annonce['couv']): ?>
-                    <img class="thumbnail" src="<?php echo site_url('assets/images/annonces/'.$annonce['couv']); ?>" style="width: 100%;" >
-                <?php endif; ?>
+                <div class="photos_container">
+                <!-- #region Jssor Slider Begin -->
+                <!-- Generator: Jssor Slider Maker -->
+                <!-- Source: http://www.jssor.com -->
+                <!-- This is deep minimized code which works independently. -->
+                <div id="jssor_1">
+                    <!-- Loading Screen -->
+                    <div data-u="loading" class="jssor_1_loading">
+                        <div class="jssor_1_child"></div>
+                    <div class="jssor_1_child_2"></div>
+                </div>
+                <div data-u="slides" id="jslides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 400px; overflow: hidden;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+                <?php $i=0;foreach($photos as $value){
+                    if($i==0){?>
+                        <div data-p="144.50">
+                            <img data-u="image" class="jssor_2" src=<?php echo $photos[0];?> />
+                            <img data-u="thumb" src=<?php echo $photos[0];?> />
+                        </div>
+                    <?php }else{?>
+                        <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src=<?php echo $photos[$i];?> />
+                            <img data-u="thumb" src=<?php echo $photos[$i];?> />
+                        </div>
+                <?php }$i++; } ?>
+                </div>
+                <!-- Thumbnail Navigator -->
+                <div data-u="thumbnavigator" class="jssort01" data-autocenter="1">
+                    <!-- Thumbnail Item Skin Begin -->
+                    <div data-u="slides" class="slides" style="cursor: default;">
+                        <div data-u="prototype" class="p">
+                            <div class="w">
+                                <div data-u="thumbnailtemplate" class="t"></div>
+                            </div>
+                            <div class="c"></div>
+                        </div>
+                    </div>
+                    <!-- Thumbnail Item Skin End -->
+                </div>
+                <!-- Arrow Navigator -->
+                <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+                <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+            </div>
+            <script type="text/javascript">jssor_1_slider_init();</script>
+                <!-- #endregion Jssor Slider End -->
+            </div>
             </div>
 
             <div class="col-md-4">
