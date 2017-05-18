@@ -63,14 +63,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</form>
 		<?php
         foreach($pubs_vvb as $val){ 
-        	$sr = 'pub/';echo $sr;echo $val['file'];
-        	echo $sr .= $sr;
-        	$sr = img_url($sr);$sr;
-        	$image_properties = array(
-		        'src'   => $sr,
-		        'alt'   => 'pub vvb',
-		        'class' => 'img_responsive img_banner'); 
-	    	echo img($image_properties);
+        	$sr = 'pubs/'.$val['file'];
+	    	echo my_img($sr,$val['file'],$class = 'img_responsive img_banner');
         } ?>
 		</article>
 	</div>

@@ -35,14 +35,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             foreach($pubs_vvb as $val){ ?>
                 <li>
                     <a href="<?php echo site_url($val['link']); ?>">
-                        <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
+                        <?php $img = 'pubs/'.$val['file']; echo my_img($img,$val['file']);?>
                     </a>
                 </li>
             <?php } 
             foreach($pubs as $val){ ?>
                 <li>
                     <a href="http://<?php echo $val['link']; ?>" target="_blank">
-                        <?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
+                        <?php $img = 'pubs/'.$val['file']; echo my_img($img,$val['file']);?>
                     </a>
                 </li>
         <?php } ?>

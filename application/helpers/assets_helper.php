@@ -24,10 +24,10 @@ if ( ! function_exists('img_url'))
 	}
 }
 
-if ( ! function_exists('img'))
+if ( ! function_exists('my_img'))
 {
-	function img($nom, $alt = '')
+	function my_img($nom, $alt = '', $class = '')
 	{
-		return '<img src="' . img_url($nom) . '" alt="' . $alt . '" />';
+		return '<img src="' . img_url($nom) . '" alt="' . $alt . '" class="' .$class. '" />';
 	}
 }

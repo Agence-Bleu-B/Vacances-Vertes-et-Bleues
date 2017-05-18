@@ -18,13 +18,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					contact@vacances-vertes-bleues.fr
 				</p>
 				<p>&copy; Vacances Vertes et Bleues, 2016</p>
-				<a href="http://www.bleu-b.com/" target="blank"class="agence">Création <?php echo img('logo_footer_web.jpg','logo_footer_web.jpg');?></a>
+				<a href="http://www.bleu-b.com/" target="blank"class="agence">Création <?php echo my_img('logo_footer_web.jpg','logo_footer_web.jpg');?></a>
 				<p>Carte par © <a href="https://cmap.comersis.com/" class="alignnone" style="display: inline; position: absolute; margin: 0 0 0 5px;">Comersis<a></p>
 			</li>
 		</ul>
 	</div>
 </footer>
 <!-- script -->
+<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous">
+</script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
