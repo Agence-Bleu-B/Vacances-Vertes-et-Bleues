@@ -69,6 +69,15 @@ class Annonces_model extends CI_Model
         foreach ($resultat as $key => $value){
             $result = $$key = $value;
         }
+
+        // $result['images'] = $this->db->select()
+        //             ->from('annonces_files')
+        //             ->get()
+        //             ->result_array();
+
+        $result['images'][0] = 'https://placehold.it/600/450/'; // Remplissage temporaire
+        $result['images'][1] = 'https://unsplash.it/600/450/?random'; // Remplissage temporaire
+
         return $result;
     }
 

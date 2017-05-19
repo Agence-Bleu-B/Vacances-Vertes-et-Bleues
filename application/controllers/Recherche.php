@@ -21,11 +21,9 @@ class Recherche extends CI_Controller {
 		$data = array();
         $this->load->model('annonces_model');
         $this->load->model('user_model');
-        $this->load->model('recherche_model');
 		$data2['annonce_type'] = $this->annonces_model->get_types();
 		$data2['annonce'] = $this->annonces_model->get_annonce($idann);
 		$data2['infos_client'] = $this->user_model->get_info($data2['annonce']['id_user']);
-		$data2['photos'] = $this->recherche_model->get_annonce_photos($idann);
         $data['title'] = 'vacances vertes et bleues,'.$data2['annonce']['title'];
         $data['description'] = $data2['annonce']['descr_courte'];
 

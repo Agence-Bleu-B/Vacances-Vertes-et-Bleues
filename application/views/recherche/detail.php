@@ -25,16 +25,16 @@
                     <div class="jssor_1_child_2"></div>
                 </div>
                 <div data-u="slides" id="jslides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 400px; overflow: hidden;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
-                <?php $i=0;foreach($photos as $value){
+                <?php $i=0;foreach($annonce['images'] as $value){
                     if($i==0){?>
                         <div data-p="144.50">
-                            <img data-u="image" class="jssor_2" src=<?php echo $photos[0];?> />
-                            <img data-u="thumb" src=<?php echo $photos[0];?> />
+                            <img data-u="image" class="jssor_2" src=<?php echo $annonce['images'][0];?> />
+                            <img data-u="thumb" src=<?php echo $annonce['images'][0];?> />
                         </div>
                     <?php }else{?>
                         <div data-p="144.50" style="display: none;">
-                            <img data-u="image" src=<?php echo $photos[$i];?> />
-                            <img data-u="thumb" src=<?php echo $photos[$i];?> />
+                            <img data-u="image" src=<?php echo $annonce['images'][$i];?> />
+                            <img data-u="thumb" src=<?php echo $annonce['images'][$i];?> />
                         </div>
                 <?php }$i++; } ?>
                 </div>
