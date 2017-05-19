@@ -31,5 +31,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Slider jssor.com -->
+<script src="https://rawgit.com/jssor/slider/master/js/jssor.slider.min.js" charset="utf-8"></script>
+<script>
+jQuery(document).ready(function ($) {
+	var options = {
+		$ThumbnailNavigatorOptions: {
+			$Class: $JssorThumbnailNavigator$,
+			$ChanceToShow: 2
+		}
+	};
+	var jssor_slider1 = new $JssorSlider$('jssor_1', options);
+});
+</script>
 </body>
 </html>

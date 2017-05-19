@@ -12,6 +12,7 @@
         <div class="row">
 
             <div class="col-md-4">
+
                 <div class="photos_container">
                 <!-- #region Jssor Slider Begin -->
                 <!-- Generator: Jssor Slider Maker -->
@@ -54,7 +55,7 @@
                 <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
                 <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
             </div>
-            <script type="text/javascript">jssor_1_slider_init();</script>
+            <!-- <script type="text/javascript">jssor_slider1_init('photos_container');</script> -->
                 <!-- #endregion Jssor Slider End -->
             </div>
             </div>
