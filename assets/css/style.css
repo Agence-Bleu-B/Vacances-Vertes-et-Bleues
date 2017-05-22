@@ -1,10 +1,12 @@
 /*Utilitaires*/
 .vertical-align-item{ /* Mettre des commentaires <!-- --> entre les items */
-	    display: inline-block;
-	    vertical-align: middle;
-	    float: none;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
 }
+.pull-down{
 
+}
 /* Styles utilitaires */
 .btn-vvb{
 
@@ -12,24 +14,27 @@
 
 /*Styles header */
 
-body > .container-fluid > .row:first-child{ /* bandeau connexion */
+#bandeau{ /* bandeau connexion */
 	background: #1D8AC9;
 	background: -moz-linear-gradient(left, #1D8AC9 0%,#CFFF19 50%,#1D8AC9 100%);
 	background: -webkit-linear-gradient(left, #1D8AC9 0%,#CFFF19 50%,#1D8AC9 100%);
 	background: linear-gradient(to right, #1D8AC9 0%,#CFFF19 50%,#1D8AC9 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1D8AC9', endColorstr='#1D8AC9',GradientType=1 );
 }
-body > .container-fluid > .row:first-child button{ /* bandeau connexion, button */
+#bandeau button{ /* bandeau connexion, button */
 	color: #1D8AC9;
 	background: #fff;
 	text-transform: uppercase;
 	margin: 2px 0;
 }
 
-header{
+header.principal{ /* main header*/
 	font-size: 125%;
 }
-header video{
+header.principal > div{
+	min-height: 425px;
+}
+header.principal video{
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -41,30 +46,66 @@ header video{
 	transform: translateX(-50%) translateY(-50%);
 	z-index: -1;
 }
-header nav a{
+header.principal nav a{ /* top menu */
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
 	display: inline-block;
 }
-header nav a:not(:last-child){
+header.principal nav a:not(:last-child){ /* top menu */
 	margin-right: 25px;
 }
-header > div > nav{ /* Sub-Menu */
+header.principal > div > nav{ /* Sub-Menu */
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 10px 0;
+	margin-bottom: 50px;
 }
 
-header > div > nav .btn{ /* Sub-Menu links */
+header.principal > div > nav .btn{ /* Sub-Menu links */
 	background-color: transparent;
 	border: 1px solid #fff;
 	border-radius: 0px;
 	color: #fff;
-	font-weight: bolder;
+	font-weight: normal;
 }
 
-/* Code Corentin MONMASSON */
+header.principal nav .btn:hover, header.principal nav a:hover{
+	text-decoration: underline;
+}
+
+/* Style content */
+
+#content{
+	background-color: #fff;
+	padding-top: 50px;
+}
+#content h2{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ADCE4A;
+}
+#content h2::before, #content h2::after{
+	content: "";
+	display: block;
+	margin: 0 auto;
+	height: 0px;
+	width: 180px;
+	padding: 3px;
+}
+#content h2::before{
+	border-top: 3px solid #ADCE4A;
+	/*border-bottom: 3px solid #ADCE4A;*/
+}
+#content h2::after{
+	/*border-top: 3px solid #ADCE4A;*/
+	border-bottom: 3px solid #ADCE4A;
+}
+@media (max-width: 768px) { /* equivalent boostrap col-xs- */
+	#cmap + div{ /* liste régions */
+		text-align: center;
+	}
+}
 
 /* Css pour Embed Google Map responsive*/
 .map_responsive{

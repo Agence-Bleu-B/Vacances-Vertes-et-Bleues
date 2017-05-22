@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body> <!-- close in footeracc.php	 -->
 	<div class="container-fluid"> <!-- close in footeracc.php	 -->
-		<div class="row"> <!-- bandeau connexion -->
+		<div id="bandeau" class="row"> <!-- bandeau connexion -->
 			<div class="col-xs-12">
 				<div class="pull-right btn-toolbar">
 					<div class="btn-group">
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-		<header class="row"> <!-- header video (balise unique page) -->
+		<header class="row principal"> <!-- header video (balise unique page) -->
 			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 				<div class="row"> <!-- Menu -->
 					<h1 class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 vertical-align-item"> <!-- Logo -->
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</nav>
 				</div>
 
-				<nav class="row"> <!-- Sub-Menu -->
+				<nav class="row pull-down"> <!-- Sub-Menu -->
 					<div class="col-xs-12 col-sm-4">
 						<button class="btn col-xs-12" type="button">
 							<i class="fa fa-search" aria-hidden="true"></i>
