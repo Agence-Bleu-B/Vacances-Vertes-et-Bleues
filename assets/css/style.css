@@ -31,6 +31,9 @@
 header.principal{ /* main header*/
 	font-size: 125%;
 }
+header.principal:not(header.principal video){
+	background: url('../images/bg.jpg') no-repeat center -10px;
+}
 header.principal > div{
 	min-height: 425px;
 }
