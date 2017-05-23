@@ -111,10 +111,14 @@ class Annonces_model extends CI_Model
             $pb = $hsweek;
         }
         if($pb != 0 && $pb != 10000){
-            $return = '<h4>'.$pb.'€</h4><p class="dureep">'.$text.'</p>';
+            // $return = '<h4>'.$pb.'€</h4><p class="dureep">'.$text.'</p>';
+            $return["prix"] = $pb;
+            $return["periode"] = $text;
         }
         else{
-            $return= '<h4>nc</h4>';
+            // $return= '<h4>nc</h4>';
+            $return["prix"] = "nc";
+            $return["periode"] = "";
         }
         return $return;
     }

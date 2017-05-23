@@ -68,6 +68,7 @@ header.principal > div > nav .btn{ /* Sub-Menu links */
 	border-radius: 0px;
 	color: #fff;
 	font-weight: normal;
+	font-size: 15.75px;
 }
 
 header.principal nav .btn:hover, header.principal nav a:hover{
@@ -107,6 +108,26 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	}
 }
 
+#liste_annonces .annonce .infos img{
+	height: 40px;
+}
+#liste_annonces .annonce .infos h4{
+	height: 40px;
+	text-transform: capitalize;
+	font-style: italic;
+}
+#liste_annonces .annonce .infos + div .btn{
+	color: #fff;
+	background-color: #ADCE4A;
+}
+#liste_annonces .annonce .infos + div .btn:hover{
+	background-color: #95B33E;
+}
+@media (max-width: 992px) { /* equivalent boostrap col-sm- et inferieurs */
+	.text-right.text-center-on-sm{ /* liste régions */
+		text-align: center;
+	}
+}
 /* Css pour Embed Google Map responsive*/
 .map_responsive{
     overflow:hidden;

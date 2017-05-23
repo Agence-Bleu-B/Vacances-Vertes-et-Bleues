@@ -51,43 +51,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <h2 class="text-center">Top Annonces</h2>
     </div>
 
-    <?php  foreach($topann as $val){ ?>
-      <div class="row"> <!-- Inline -->
-        <li class="col-md-4 col-xs-12">
-          <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
-            <img <?php echo 'src="'.base_url().$val['photocouv'].'"';?>>
-          </a>
-        </li>
-          <li class="col-md-6">
-                <h2><a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>><?php echo $val['title'];?></a></h2>
-                <h3><a><?php echo $val['region']; echo '('.$val['departement'].')'; ?></a></h3><!-- Lien page de la région -->
-                <p><?php echo $val['descr_courte'];?></p>
-                <ul class="icones_annonce">
-                <?php if(isset($val['wifi']) && $val['wifi'] ==1) {?>
-                    <li><img src="<?php echo base_url().'assets/images/picto/pictowifi.png';?>"></li>
-                <?php } if(isset($val['acces']) && $val['acces'] ==1) {?>
-                    <li><img src="<?php echo base_url().'assets/images/picto/pictopmr.png';?>"></li>
-                <?php } if(isset($val['animaux']) && $val['animaux'] ==1) {?>
-                    <li><img src="<?php echo base_url().'assets/images/picto/pictonimo.png';?>"></li>
-                <?php } if(isset($val['cheque']) && $val['cheque'] ==1) {?>
-                    <li><img src="<?php echo base_url().'assets/images/picto/pictocheque.png';?>"></li>
-                <?php }?>
-                </ul>
-            </li>
-            <li class="col-md-2">
-                <!-- étoiles -->
-                <p>
-                <?php $i = 0;while($i < $val['stars']){ $i++;?>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                <?php }?>
-                </p>
-                <!-- prix-->
-                <p>à partir de</p>
-                <?php echo $val['prixbas']; ?>
-                <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?> class="annonce_button">Découvrir</a>
-            </li>
-        </div>
-    <?php } ?><!-- fin Annonce -->
-
   </div>
+
+  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+    <section id="liste_annonces">
+
+      <?php  foreach($topann as $val){ ?>
+        <div class="row annonce"> <!-- annonce -->
+
+          <div class="col-xs-12 col-md-4"> <!-- photo -->
+            <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
+              <img class="img-responsive img-thumbnail center-block" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-md-6 infos"> <!-- infos -->
+            <div class="row">
+              <div class="col-xs-12">
+                <h3><a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>><?php echo $val['title'];?></a></h3>
+                <h4><a><?php echo $val['region']; echo ' ('.$val['departement'].')'; ?></a></h4><!-- Lien page de la région -->
+                <p><?php echo $val['descr_courte'];?></p>
+              </div>
+            </div>
+            <div class="row"> <!-- pictos -->
+              <div class="col-xs-12">
+                <?php if (isset($val['wifi']) && $val['wifi'] == 1): ?>
+                  <img src="<?php echo base_url().'assets/images/picto/pictowifi.png';?>">
+                <?php endif; ?>
+                <?php if (isset($val['acces']) && $val['acces'] == 1): ?>
+                  <img src="<?php echo base_url().'assets/images/picto/pictopmr.png';?>">
+                <?php endif; ?>
+                <?php if (isset($val['animaux']) && $val['animaux'] == 1): ?>
+                  <img src="<?php echo base_url().'assets/images/picto/pictonimo.png';?>">
+                <?php endif; ?>
+                <?php if (isset($val['cheque']) && $val['cheque'] == 1): ?>
+                  <img src="<?php echo base_url().'assets/images/picto/pictocheque.png';?>">
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-2 text-right text-center-on-sm">
+            <div class="col-xs-6 col-md-12 h3"> <!-- étoiles -->
+              &nbsp;
+              <?php $i = 0;while($i < $val['stars']){ $i++;?>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              <?php }?>
+            </div>
+            <!-- <div class="col-xs-4 col-md-12">
+            </div> -->
+            <div class="col-xs-6 col-md-12">
+              <p>À partir de :</p>
+              <strong class="h1">
+                <?php echo $val['prixbas']['prix']."€"; ?>
+              </strong>
+              <p>
+                <?php echo $val['prixbas']['periode']; ?>
+              </p>
+            </div>
+            <div class="col-xs-6 col-xs-offset-3 col-md-12 col-md-offset-0">
+              <button href="<?php echo site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'];?>" class="btn btn-lg btn-block">Découvrir</button>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+      <?php } ?><!-- fin Annonce -->
+
+        </section>
+  </div>
+
 </div>
