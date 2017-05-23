@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <hr>
       <?php } ?><!-- fin Annonce -->
 
-        </section>
+    </section>
   </div>
 
 </div>

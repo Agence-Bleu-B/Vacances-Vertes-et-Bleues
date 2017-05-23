@@ -46,7 +46,7 @@ header.principal video{
 	transform: translateX(-50%) translateY(-50%);
 	z-index: -1;
 }
-header.principal nav a{ /* top menu */
+header.principal nav a, footer.principal nav a, footer.principal h4{ /* top menu */
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -79,7 +79,7 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 
 #content{
 	background-color: #fff;
-	padding-top: 50px;
+	padding: 50px 0 20px 0;
 }
 #content h2{
 	text-transform: uppercase;
@@ -112,7 +112,6 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	height: 40px;
 }
 #liste_annonces .annonce .infos h4{
-	height: 40px;
 	text-transform: capitalize;
 	font-style: italic;
 }
@@ -128,6 +127,48 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 		text-align: center;
 	}
 }
+#liste_annonces hr{
+	border: 2px solid #ADCE4A;
+}
+#liste_annonces hr:last-child{
+	display: none;
+}
+
+/* Style footer */
+
+footer.principal{
+	background-color: #0071B7;
+	color: #fff;
+	padding-top: 50px;
+}
+footer.principal a{
+	color: #fff;
+}
+footer.principal a:hover{
+	color: #fff;
+}
+footer.principal h4{
+	margin-top: 0;
+}
+footer.principal > div > *:not(:last-child){
+	/*border-right: 1px dashed #fff;*/
+}
+footer.principal .vr::before{
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 100%;
+	border-right: 1px dashed #fff;
+}
+footer.principal .hr{
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px dashed #fff;
+}
+footer.principal > div:last-child{
+	padding: 20px 0;
+}
+
 /* Css pour Embed Google Map responsive*/
 .map_responsive{
     overflow:hidden;
