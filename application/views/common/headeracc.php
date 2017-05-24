@@ -37,6 +37,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<header class="row principal"> <!-- header video (balise unique page) -->
+			<video autoplay poster="<?php echo base_url().'assets/images/poster.jpg';?>" id="bgVideo" loop>
+				<!-- <source src="<?php echo base_url().'assets/videos/VVB_Video.webm';?>" type="video/webm">
+				<source src="<?php echo base_url().'assets/videos/VVB_Video.mp4';?>" type="video/mp4"> -->
+			</video>
 			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 				<div class="row"> <!-- Menu -->
 					<h1 class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 vertical-align-item"> <!-- Logo -->
@@ -44,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<?php echo my_img('logo.png',"Vacances Vertes et Bleues","img-responsive") ?>
 						</a>
 					</h1><!--
-			 --><nav class="hidden-xs col-sm-8 col-sm-offset-0 col-md-7 col-md-offset-1 vertical-align-item"> <!-- links -->
+			 --><nav class="hidden-xs col-sm-8 col-sm-offset-0 col-md-7 col-md-offset-1 vertical-align-item text-right"> <!-- links -->
 			 			<a href="#">Nos conseils</a>
 					 	<a href="#">Déposer une annonce</a>
 					 	<a href="#">Mon compte</a>
@@ -76,8 +80,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</nav>
 			</div>
 
-			<video autoplay poster="<?php echo base_url().'assets/images/poster.jpg';?>" id="bgVideo" loop>
-	        <!-- <source src="<?php echo base_url().'assets/videos/VVB_Video.webm';?>" type="video/webm">
-	        <source src="<?php echo base_url().'assets/videos/VVB_Video.mp4';?>" type="video/mp4"> -->
-	    </video>
 		</header> <!-- /header (video) -->

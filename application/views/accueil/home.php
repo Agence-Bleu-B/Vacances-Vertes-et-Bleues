@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<div id="content" class="row"> <!-- content -->
+<section id="content" class="row"> <!-- content -->
   <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
     <div class="row"> <!-- content top -->
@@ -47,14 +47,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 
-    <div class="row"> <!-- liste annonces titre -->
-      <h2 class="text-center">Top Annonces</h2>
-    </div>
 
   </div>
 
   <div class="col-xs-12 col-lg-8 col-lg-offset-2">
     <section id="liste_annonces">
+
+      <div class="row"> <!-- liste annonces titre -->
+        <h2 class="text-center">Top Annonces</h2>
+      </div>
 
       <?php  foreach($topann as $val){ ?>
         <div class="row annonce"> <!-- annonce -->
@@ -70,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="col-xs-12">
                 <h3><a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>><?php echo $val['title'];?></a></h3>
                 <h4><a><?php echo $val['region']; echo ' ('.$val['departement'].')'; ?></a></h4><!-- Lien page de la région -->
-                <p><?php echo $val['descr_courte'];?></p>
+                <p class="text-justify"><?php echo $val['descr_courte'];?></p>
               </div>
             </div>
             <div class="row"> <!-- pictos -->
@@ -92,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
 
           <div class="col-xs-12 col-md-2 text-right text-center-on-sm">
-            <div class="col-xs-6 col-md-12 h3"> <!-- étoiles -->
+            <div class="col-xs-6 col-md-12 h4"> <!-- étoiles -->
               &nbsp;
               <?php $i = 0;while($i < $val['stars']){ $i++;?>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -121,4 +122,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </section>
   </div>
 
-</div>
+</section>
