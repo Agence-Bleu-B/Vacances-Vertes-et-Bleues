@@ -27,7 +27,7 @@
 	background: linear-gradient(to right, #1D8AC9 0%,#CFFF19 50%,#1D8AC9 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1D8AC9', endColorstr='#1D8AC9',GradientType=1 );
 }
-#bandeau button{ /* bandeau connexion, button */
+#bandeau a{ /* bandeau connexion, button */
 	color: #1D8AC9;
 	background: #fff;
 	text-transform: uppercase;

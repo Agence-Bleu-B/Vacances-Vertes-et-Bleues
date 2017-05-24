@@ -27,10 +27,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-xs-12">
 				<div class="pull-right btn-toolbar">
 					<div class="btn-group">
-						<button class="btn" type="button">Connexion</button>
+						<a href="<?php echo site_url('compte');?>" class="btn" type="button">Connexion</a>
 					</div>
 					<div class="btn-group">
-						<button class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+						<a class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>
@@ -49,9 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</a>
 					</h1><!--
 			 --><nav class="hidden-xs col-sm-8 col-sm-offset-0 col-md-7 col-md-offset-1 vertical-align-item text-right"> <!-- links -->
-			 			<a href="#">Nos conseils</a>
-					 	<a href="#">Déposer une annonce</a>
-					 	<a href="#">Mon compte</a>
+			 			<a href="<?php echo site_url('conseils');?>">Nos conseils</a>
+					 	<a href="<?php echo site_url('compte');?>">Déposer une annonce</a>
+					 	<a href="<?php echo site_url('compte');?>">Mon compte</a>
 					</nav>
 				</div>
 

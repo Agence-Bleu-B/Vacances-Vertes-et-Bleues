@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </div>
 
-  <div class="col-xs-12 col-lg-9 col-centered">
+  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
     <section id="liste_annonces">
 
       <div class="row"> <!-- liste annonces titre -->
