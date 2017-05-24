@@ -57,25 +57,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<nav class="row pull-down"> <!-- Sub-Menu -->
 					<div class="col-xs-12 col-sm-4">
-						<button class="btn col-xs-12" type="button">
+						<a class="btn col-xs-12" href="#cmap" type="button">
 							<i class="fa fa-search" aria-hidden="true"></i>
 							<br>
 							Trouver la destination <br>de vos vacances
-						</button>
+						</a>
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<button class="btn col-xs-12" type="button">
+						<a class="btn col-xs-12" href="<?php echo site_url('conseils');?>" type="button">
 							<i class="fa fa-book" aria-hidden="true"></i>
 							<br>
 							Avant de louer, <br>nos conseils
-						</button>
+						</a>
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<button class="btn col-xs-12" type="button">
+						<a class="btn col-xs-12" href="<?php echo site_url('compte');?>" type="button">
 							<i class="fa fa-cloud-upload" aria-hidden="true"></i>
 							<br>
 							Espace Annonceurs <br><small>Dépôt et modifications d'annonces</small>
-						</button>
+						</a>
 					</div>
 				</nav>
 			</div>

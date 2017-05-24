@@ -55,7 +55,7 @@ header.principal video, header.principal #banner{
 header.principal #banner{
 	background: url('../images/bg.jpg') no-repeat center -10px;
 }
-header.principal nav a, footer.principal nav a, footer.principal h4{ /* top menu */
+header.principal nav a:not(.btn), footer.principal nav a, footer.principal h4{ /* top menu */
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
