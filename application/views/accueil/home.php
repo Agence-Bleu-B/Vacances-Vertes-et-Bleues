@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </div>
 
-  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+  <div class="col-xs-12 col-lg-9 col-centered">
     <section id="liste_annonces">
 
       <div class="row"> <!-- liste annonces titre -->
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="col-xs-12 col-md-4"> <!-- photo -->
             <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
-              <img class="img-responsive center-block" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
+              <img class="img-responsive img-thumbnail center-block couv" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
             </a>
           </div>
 
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
               <div class="col-xs-12">
                 <h3><a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>><?php echo $val['title'];?></a></h3>
-                <h4><a><?php echo $val['region']; echo ' ('.$val['departement'].')'; ?></a></h4><!-- Lien page de la région -->
+                <h4><?php echo $val['departement']; echo ' ('.$val['region'].')'; ?></h4><!-- Lien page de la région -->
                 <p class="text-justify"><?php echo $val['descr_courte'];?></p>
               </div>
             </div>
@@ -92,16 +92,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
 
           <div class="col-xs-12 col-md-2 text-right text-center-on-sm">
-            <div class="col-xs-6 col-md-12 h4"> <!-- étoiles -->
-              &nbsp;
+            <div class="col-xs-6 col-md-12 h4 vertical-align-item-on-sm"> <!-- étoiles -->
+              <!-- &nbsp; -->
               <?php $i = 0;while($i < $val['stars']){ $i++;?>
                 <i class="fa fa-star" aria-hidden="true"></i>
               <?php }?>
-            </div>
-            <!-- <div class="col-xs-4 col-md-12">
-            </div> -->
-            <div class="col-xs-6 col-md-12">
-              <p>À partir de :</p>
+            </div><!--
+         --><div class="col-xs-6 col-md-12 vertical-align-item-on-sm">
+              <p>À partir de:</p>
               <strong class="h1">
                 <?php echo $val['prixbas']['prix']."€"; ?>
               </strong>

@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-xs-12 col-md-4"> <!-- infos -->
             <h2><?php echo $annonce['title']; ?></h2>
             <h4><?php echo $annonce['town']; ?></h4>
-            <h3>La location ou le camping</h3>
+            <h3>Informations</h3>
 
             <div class="col-md-6">
               <ul class="list-unstyled">

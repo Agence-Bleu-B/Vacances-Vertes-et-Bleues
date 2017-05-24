@@ -4,6 +4,12 @@
 	vertical-align: middle;
 	float: none;
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 .pull-down{
 
 }
@@ -122,10 +128,12 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	font-weight: bold;
 	border-bottom: 1px solid #1D8AC9;
 }
-
-/*#liste_annonces .annonce, #liste_annonces .annonce img:first-of-type{
-	height: 250px;
-}*/
+@media (min-width: 992px) { /* equivalent boostrap col-md- et superieurs */
+	#liste_annonces .annonce img.couv{
+		max-height: 275px;
+		width: 100%;
+	}
+}
 #liste_annonces .annonce .infos img{
 	height: 40px;
 }
@@ -143,6 +151,11 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 @media (max-width: 992px) { /* equivalent boostrap col-sm- et inferieurs */
 	.text-center-on-sm{ /* liste régions */
 		text-align: center;
+	}
+	.vertical-align-item-on-sm{ /* Mettre des commentaires <!-- --> entre les items */
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
 	}
 }
 #liste_annonces hr{
