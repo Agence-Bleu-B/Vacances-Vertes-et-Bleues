@@ -110,6 +110,9 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 		text-align: center;
 	}
 }
+#content .pubs img{
+	padding-bottom: 10px;
+}
 
 #content #detail_annonce h2{
 	font-weight: bold;
@@ -120,6 +123,9 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	border-bottom: 1px solid #1D8AC9;
 }
 
+/*#liste_annonces .annonce, #liste_annonces .annonce img:first-of-type{
+	height: 250px;
+}*/
 #liste_annonces .annonce .infos img{
 	height: 40px;
 }

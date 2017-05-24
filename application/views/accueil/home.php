@@ -31,20 +31,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </ul>
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-lg-5"> <!-- Pubs -->
+      <div class="col-xs-12 col-sm-12 col-lg-5 pubs"> <!-- Pubs -->
         <?php
         foreach($pubs_vvb as $val){ ?>
           <a href="<?php echo site_url($val['link']); ?>">
             <?php $img = 'pubs/'.$val['file']; echo my_img($img,$val['file'],"img-responsive center-block");?>
           </a>
-          <?php }
-          foreach($pubs as $val){ ?>
-            <a href="http://<?php echo $val['link']; ?>" target="_blank">
-              <?php $img = 'pubs/'.$val['file']; echo my_img($img,$val['file'],"img-responsive center-block");?>
-            </a>
-            <?php } ?>
-          </ul>
-        </div>
+        <?php }
+        foreach($pubs as $val){ ?>
+          <a href="http://<?php echo $val['link']; ?>" target="_blank">
+            <?php $img = 'pubs/'.$val['file']; echo my_img($img,$val['file'],"img-responsive center-block");?>
+          </a>
+        <?php } ?>
+      </div>
     </div>
 
 
@@ -62,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="col-xs-12 col-md-4"> <!-- photo -->
             <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
-              <img class="img-responsive img-thumbnail center-block" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
+              <img class="img-responsive center-block" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
             </a>
           </div>
 
