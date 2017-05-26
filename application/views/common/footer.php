@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://rawgit.com/CWSpear/bootstrap-hover-dropdown/master/bootstrap-hover-dropdown.min.js" charset="utf-8"></script>
 <!-- Slider jssor.com -->
 <script src="https://rawgit.com/jssor/slider/master/js/jssor.slider.min.js" charset="utf-8"></script>
 <script>

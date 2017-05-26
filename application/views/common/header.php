@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-xs-12">
 				<div class="pull-right btn-toolbar">
 					<div class="btn-group">
-						<button class="btn" type="button">Connexion</button>
+						<a href="<?php echo site_url('compte');?>" class="btn" type="button">Connexion</a>
 					</div>
 					<div class="btn-group">
 						<button class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
@@ -49,9 +49,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</a>
 					</h1><!--
 			 --><nav class="hidden-xs col-sm-8 col-sm-offset-0 col-md-7 col-md-offset-1 vertical-align-item text-right"> <!-- links -->
-			 			<a href="#">Nos conseils</a>
-					 	<a href="#">Déposer une annonce</a>
-					 	<a href="#">Mon compte</a>
+			 			<span class="dropdown">
+							<a href="<?php echo site_url('conseils');?>" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">Nos conseils <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="<?php echo site_url('conseils/precautions');?>">Précautions</a></li>
+								<li><a tabindex="-1" href="<?php echo site_url('conseils/demander');?>">Vous devez demander</a></li>
+								<li><a tabindex="-1" href="<?php echo site_url('conseils/reservations');?>">Réservations</a></li>
+								<li><a tabindex="-1" href="<?php echo site_url('conseils/demarches');?>">Démarches</a></li>
+								<li><a tabindex="-1" href="<?php echo site_url('conseils/recours');?>">Recours</a></li>
+							</ul>
+			 			</span>
+						<a href="<?php echo site_url('compte');?>">Déposer une annonce</a>
+					 	<a href="<?php echo site_url('compte');?>">Mon compte</a>
 					</nav>
 				</div>
 			</div>

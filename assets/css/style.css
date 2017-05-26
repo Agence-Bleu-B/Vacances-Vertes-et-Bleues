@@ -55,6 +55,11 @@ header.principal video, header.principal #banner{
 header.principal #banner{
 	background: url('../images/bg.jpg') no-repeat center -10px;
 }
+header.principal nav .dropdown-menu a{
+	color: #000 !important;
+	font-weight: normal !important;
+	width: 100% !important;
+}
 header.principal nav a:not(.btn), footer.principal nav a, footer.principal h4{ /* top menu */
 	color: #fff;
 	text-transform: uppercase;
@@ -70,7 +75,6 @@ header.principal > div > nav{ /* Sub-Menu */
 	padding: 10px 0;
 	margin-bottom: 50px;
 }
-
 header.principal > div > nav .btn{ /* Sub-Menu links */
 	background-color: transparent;
 	border: 1px solid #fff;
@@ -79,11 +83,9 @@ header.principal > div > nav .btn{ /* Sub-Menu links */
 	font-weight: normal;
 	font-size: 15.75px;
 }
-
 header.principal nav .btn:hover, header.principal nav a:hover{
 	text-decoration: underline;
 }
-
 /* Style content */
 
 #content{
