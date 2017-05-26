@@ -5,14 +5,26 @@ class Recherche extends CI_Controller {
 	public function index()
 	{
 		$data = array();
+        $data2 = array();
         $data['title'] = 'vacances vertes et bleues, recherchez vos vacances en ligne';
         $data['description'] = 'Site de locations de vacances directement auprès des propriétaires et des campings. Aussi, un des derniers guide papier à être édité en France et en Belgique.';
-
-        //chargement top annonces
 		$this->load->model('annonces_model');
-
+        //recuperation des types
+        $data2['annonce_type'] = $this->annonces_model->get_types();
+        //action si requete region seule
+        if (isset($_GET['region'])) {
+            # code...
+        }
+        //action si recherche complète
+        elseif (isset($_POST['affine'])) {
+            # code...
+        }
+        //action pas de requetes
+        else{
+            //recupération top annonces
+        }
 		$this->load->view('common/header',$data);
-        $this->load->view('recherche/accueil_recherche');
+        $this->load->view('recherche/accueil_recherche',$data2);
         $this->load->view('common/footer');
 	}
     public function detail()
