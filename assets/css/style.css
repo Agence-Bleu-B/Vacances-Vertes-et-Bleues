@@ -55,9 +55,12 @@ header.principal video, header.principal #banner{
 header.principal #banner{
 	background: url('../images/bg.jpg') no-repeat center -10px;
 }
+header.principal nav .dropdown-menu{
+	border-radius: 0px;
+}
 header.principal nav .dropdown-menu a{
 	color: #000 !important;
-	font-weight: normal !important;
+	font-weight: lighter !important;
 	width: 100% !important;
 }
 header.principal nav a:not(.btn), footer.principal nav a, footer.principal h4{ /* top menu */
