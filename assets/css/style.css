@@ -100,7 +100,7 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	font-weight: bold;
 	color: #ADCE4A;
 }
-#content #liste_annonces h2::before, #content h2::after{
+#content #liste_annonces h2::before, #content #liste_annonces h2::after{
 	content: "";
 	display: block;
 	margin: 0 auto;
@@ -128,7 +128,10 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 #content #detail_annonce h2{
 	font-weight: bold;
 }
-#content #detail_annonce h3{
+#content #conseils p{
+	line-height: 175%;
+}
+#content #detail_annonce h3, #content #inscription h3, #content #conseils h3{
 	color: #1D8AC9;
 	font-weight: bold;
 	border-bottom: 1px solid #1D8AC9;

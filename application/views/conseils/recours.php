@@ -1,13 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<section id="page">
-	<section id="content">
-		<div class="container" itemprop="text">
-			<h3 class="nannonce">Recours</h3>
-			<h5></h5>
-            <ul>
-                <li class="conseil_elmt">
+<section id="content">
+	<section id="page" itemprop="text">
+		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+			<h3>Recours</h3>
+                <div class="col-xs-12 col-md-6 text-justify vertical-align-item">
                     <h5>Quels recours en cas de non réponse ?</h5>
                     <p><i class="fa fa-square" aria-hidden="true"></i>Vous avez loué directement avec un particulier. Vous pouvez prévenir la direction de la concurrence et de la répression des fraudes si vous avez été victime d’une publicité mensongère.</p>
                     <p><i class="fa fa-square" aria-hidden="true"></i>Vous avez loué par l’intermédiaire d’une agence immobilière. Vous pouvez porter plainte devant la fédération professionnelle à laquelle est rattachée cette agence.</p>
@@ -15,16 +13,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <p><i class="fa fa-square" aria-hidden="true"></i>Vous avez loué un logement classé meublé de tourisme. Vous devez si le logement ne correspond pas aux normes imposées pour sa catégorie de classement, saisir le préfet par lettre recommandée avec accusé de réception dans un délai de huit jours à compter du début de la location. Le préfet pourra alors faire effectuer une visite des locaux et prononcer le déclassement ou la radiation de la liste des meublés classés. Ce recours ne vous permettra pas une indemnisation directe mais fera que d’autres après vous ne tombent pas dans le même piège.</p>
                     <p><i class="fa fa-square" aria-hidden="true"></i>Vous avez loué dans un Gîte de France. Toute réclamation doit être adressée, dans les huit jours qui suivent le début de la location, au relais départemental dont dépend le gîte le relais départemental peut alors saisir la commission départementale de l’action touristique et proposer la radiation du gîte. Pour connaître l’adresse du relais départemental connectez-vous sur www.gites-de-france.com ou téléphonez au 01 49 70 75 75.</p>
                     <p><i class="fa fa-square" aria-hidden="true"></i>Vous avez réservé une chambre dans un hôtel. Vous pouvez porter votre plainte auprès de l’Union des Métiers et des Industries de l’Hôtellerie (www.umih.fr)</p>
+                </div>
+                <li class="conseil_elmt">
+                    <div class="illust_page">
+                        <?php echo my_img('conseils/pexels-photo-166639.jpeg','pexels-photo-166639'); ?>
+                    </div>
                 </li>
                 <li class="conseil_elmt">
-                    <div class="illust_page">						
-                        <?php echo img('conseils/pexels-photo-166639.jpeg','pexels-photo-166639'); ?>	
-                    </div>				
-                </li>
-                <li class="conseil_elmt">
-                    <div class="illust_page">						
-                        <?php echo img('conseils/231h.png','231h'); ?>	
-                    </div>				
+                    <div class="illust_page">
+                        <?php echo my_img('conseils/231h.png','231h'); ?>
+                    </div>
                 </li>
                 <li class="conseil_elmt">
                     <h5>A défaut d’accord à l’amiable, et en cas de préjudice important, comment faire reconnaître son droit ?</h5>
@@ -34,5 +32,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </li>
             </ul>
 		</div>
-	</section> 
+	</section>
 </section>
