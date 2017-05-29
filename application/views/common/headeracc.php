@@ -50,17 +50,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</h1><!--
 			 --><nav class="hidden-xs col-sm-8 col-sm-offset-0 col-md-7 col-md-offset-1 vertical-align-item text-right"> <!-- links -->
 					  <span class="dropdown">
-						  <a href="<?php echo site_url('conseils');?>" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="250" data-close-others="false"><?php echo lang('menu_conseils'); echo lang('language_key');?> <b class="caret"></b></a>
+						  <a href="<?php echo site_url('conseils');?>" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="250" data-close-others="false"><?php echo lang('menu_conseils');?> <b class="caret"></b></a>
 						  <ul class="dropdown-menu">
-							  <li><a tabindex="-1" href="<?php echo site_url('conseils/precautions');?>">Précautions</a></li>
+							  <li><a tabindex="-1" href="<?php echo site_url('conseils/precautions');?>"><?php echo lang('menu_precautions');?></a></li>
 								<li class="divider"></li>
-							  <li><a tabindex="-1" href="<?php echo site_url('conseils/demander');?>">Vous devez demander</a></li>
+							  <li><a tabindex="-1" href="<?php echo site_url('conseils/demander');?>"><?php echo lang('menu_demander');?></a></li>
 								<li class="divider"></li>
-							  <li><a tabindex="-1" href="<?php echo site_url('conseils/reservations');?>">Réservations</a></li>
+							  <li><a tabindex="-1" href="<?php echo site_url('conseils/reservations');?>"><?php echo lang('menu_reservations');?></a></li>
 								<li class="divider"></li>
-							  <li><a tabindex="-1" href="<?php echo site_url('conseils/demarches');?>">Démarches</a></li>
+							  <li><a tabindex="-1" href="<?php echo site_url('conseils/demarches');?>"><?php echo lang('menu_demarches');?></a></li>
 								<li class="divider"></li>
-							  <li><a tabindex="-1" href="<?php echo site_url('conseils/recours');?>">Recours</a></li>
+							  <li><a tabindex="-1" href="<?php echo site_url('conseils/recours');?>"><?php echo lang('menu_recours');?></a></li>
 						  </ul>
 					  </span>
 					 	<a href="<?php echo site_url('compte');?>">Déposer une annonce</a>
