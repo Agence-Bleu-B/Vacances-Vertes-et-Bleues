@@ -6,6 +6,7 @@ class Recherche extends CI_Controller {
 	{
 		$data = array();
         $data2 = array();
+        //header
         $data['title'] = 'vacances vertes et bleues, recherchez vos vacances en ligne';
         $data['description'] = 'Site de locations de vacances directement auprès des propriétaires et des campings. Aussi, un des derniers guide papier à être édité en France et en Belgique.';
 		$this->load->model('annonces_model');
@@ -23,6 +24,17 @@ class Recherche extends CI_Controller {
         else{
             //recupération top annonces
         }
+        //pagination
+        $this->load->library('pagination');
+
+        $config['base_url'] = site_url('recherche');
+        $config['total_rows'] = 200;
+        $config['per_page'] = 20;
+        $config['page_query_string'] = TRUE;
+
+        $this->pagination->initialize($config);
+        $data2['pagination'] = $this->pagination->create_links();
+        //cahrgement vues
 		$this->load->view('common/header',$data);
         $this->load->view('recherche/accueil_recherche',$data2);
         $this->load->view('common/footer');

@@ -27,6 +27,20 @@ class Annonces_model extends CI_Model
         }
 		return $result;
     }
+        //get detail annonce
+    function get_detail($idann){
+        $result = array();
+        $get = "id =".$idann;
+        $resultat = $this->db->select('*')
+                        ->from('annonce')
+                        ->where($get)
+                        ->get()
+                        ->result_array();
+        foreach ($resultat as $key => $value){
+            $result = $$key = $value;
+        }
+        return $result;
+    }
     // liste de toutes les annonces
     public function get_all_annonces()
     {
@@ -121,20 +135,6 @@ class Annonces_model extends CI_Model
             $return["periode"] = "";
         }
         return $return;
-    }
-    //get detail annonce
-    function get_detail($idann){
-        $result = array();
-        $get = "id =".$idann;
-        $resultat = $this->db->select('*')
-                        ->from('annonce')
-                        ->where($get)
-                        ->get()
-                        ->result_array();
-        foreach ($resultat as $key => $value){
-            $result = $$key = $value;
-        }
-        return $result;
     }
     //recup couv
     function recup_photo_couv($idann){

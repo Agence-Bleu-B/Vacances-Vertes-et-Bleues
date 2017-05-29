@@ -62,4 +62,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</ul>
 		</aside>
 	</div>
+	<?php echo $pagination; ?>
 </div>
