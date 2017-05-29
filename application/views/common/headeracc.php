@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-xs-12">
 				<div class="pull-right btn-toolbar">
 					<div class="btn-group">
-						<a href="<?php echo site_url('compte');?>" class="btn" type="button">Connexion</a>
+						<a href="<?php echo site_url('compte');?>" class="btn" type="button"><?php echo lang('menu_connexion');?></a>
 					</div>
 					<div class="btn-group">
 						<a class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -63,8 +63,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							  <li><a tabindex="-1" href="<?php echo site_url('conseils/recours');?>"><?php echo lang('menu_recours');?></a></li>
 						  </ul>
 					  </span>
-					 	<a href="<?php echo site_url('compte');?>">Déposer une annonce</a>
-					 	<a href="<?php echo site_url('compte');?>">Mon compte</a>
+					 	<a href="<?php echo site_url('compte');?>"><?php echo lang('menu_depot');?></a>
+					 	<a href="<?php echo site_url('compte');?>"><?php echo lang('menu_moncompte');?></a>
 					</nav>
 				</div>
 
