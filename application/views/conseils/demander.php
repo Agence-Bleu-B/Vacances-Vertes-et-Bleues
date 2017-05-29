@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="conseils" itemprop="text">
 		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 			<h3>Vous devez demander</h3>
-			<h5>Vous devez demander à ce qu'il vous soit envoyé :</h5>
+			<strong>Vous devez demander à ce qu'il vous soit envoyé :</strong>
 			<br>
 			<div class="row">
 				<p class="col-xs-12 col-md-6 text-justify vertical-align-item">

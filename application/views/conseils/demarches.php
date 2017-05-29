@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<section id="conseils" itemprop="text">
 		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 			<h3>Démarches</h3>
-			<h5>Quelles sont les démarches à effectuer si la location ne correspond pas à ce qui avait été promis ?</h5>
+			<strong>Quelles sont les démarches à effectuer si la location ne correspond pas à ce qui avait été promis ?</strong>
 			<br>
 			<div class="row">
 				<p class="col-xs-12 col-md-6 text-justify vertical-align-item">
