@@ -55,4 +55,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h3>Résultats de recherche</h3>
 		</div>
 	</section>
+	<?php echo $pagination; ?>
 </section>
