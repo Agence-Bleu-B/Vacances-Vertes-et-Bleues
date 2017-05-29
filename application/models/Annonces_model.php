@@ -2,13 +2,13 @@
 class Annonces_model extends CI_Model
 {
     // récupérer les top annonces
-    public function get_top_annonces()
+    public function get_top_annonces($limit = 5)
     {
         $i=0;
 		$resultat = $this->db->select()
 							->from('annonce')
                             ->where('formule="vip" OR formule="privilege" AND statut="cours"')
-							->limit(5)
+							->limit($limit)
 							->order_by('title', 'RANDOM')
 							->get()
 							->result_array();
@@ -27,17 +27,28 @@ class Annonces_model extends CI_Model
         }
 		return $result;
     }
-        //get detail annonce
-    function get_detail($idann){
-        $result = array();
-        $get = "id =".$idann;
-        $resultat = $this->db->select('*')
-                        ->from('annonce')
-                        ->where($get)
-                        ->get()
-                        ->result_array();
+        //get liste annonce par recehrche
+    function get_annonces_rech($limit = 10, $rek = array()){
+        $i=0;
+        $resultat = $this->db->select()
+                            ->from('annonce')
+                            ->where($rek)
+                            ->limit($limit)
+                            ->order_by('title', 'RANDOM')
+                            ->get()
+                            ->result_array();
         foreach ($resultat as $key => $value){
-            $result = $$key = $value;
+            $result[$i] = $$key = $value;
+            $result[$i]['prixbas'] = $this->prix_bas($result[$i]['hsnuit'],$result[$i]['psnuit'],$result[$i]['psweek'],$result[$i]['hsweek']);
+            $result[$i]['photocouv'] = $this->recup_photo_couv($result[$i]['id']);
+            $result[$i]['region'] = $this->region($result[$i]['region']);
+            $result[$i]['departement'] = $this->dep($result[$i]['departement']);
+            $result[$i]['urlann'] =  url_title($result[$i]['title']);
+            $result[$i]['urlann'] .= '-';
+            $result[$i]['urlann'] .= url_title($result[$i]['region']);
+            $result[$i]['urlann'] .= '-';
+            $result[$i]['urlann'] .= url_title($result[$i]['departement']);
+            $i++;
         }
         return $result;
     }
@@ -49,6 +60,28 @@ class Annonces_model extends CI_Model
                     ->get()
                     ->result_array();
         return $row;
+    }
+    // liste une annonce (detai)
+    public function get_annonce($id)
+    {
+        $resultat = $this->db->select()
+                    ->from('annonce')
+                    ->where('id', $id)
+                    ->get()
+                    ->result_array();
+        foreach ($resultat as $key => $value){
+            $result = $$key = $value;
+        }
+
+        // $result['images'] = $this->db->select()
+        //             ->from('annonces_files')
+        //             ->get()
+        //             ->result_array();
+
+        $result['images'][0] = 'https://placehold.it/600/450/'; // Remplissage temporaire
+        $result['images'][1] = 'https://unsplash.it/600/450/?random'; // Remplissage temporaire
+
+        return $result;
     }
 
     // liste de toutes les annonces de $id_user
@@ -72,28 +105,6 @@ class Annonces_model extends CI_Model
         return $row;
     }
 
-    // liste une annonce
-    public function get_annonce($id)
-    {
-        $resultat = $this->db->select()
-                    ->from('annonce')
-                    ->where('id', $id)
-                    ->get()
-                    ->result_array();
-        foreach ($resultat as $key => $value){
-            $result = $$key = $value;
-        }
-
-        // $result['images'] = $this->db->select()
-        //             ->from('annonces_files')
-        //             ->get()
-        //             ->result_array();
-
-        $result['images'][0] = 'https://placehold.it/600/450/'; // Remplissage temporaire
-        $result['images'][1] = 'https://unsplash.it/600/450/?random'; // Remplissage temporaire
-
-        return $result;
-    }
 
     // liste des types des annonces
     public function get_stats()

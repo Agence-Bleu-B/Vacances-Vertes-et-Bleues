@@ -14,7 +14,7 @@ class Recherche extends CI_Controller {
         $data2['annonce_type'] = $this->annonces_model->get_types();
         //action si requete region seule
         if (isset($_GET['region'])) {
-            # code...
+            $data2['listannonces'] = $this->annonces_model->get_annonces_rech(10);
         }
         //action si recherche complète
         elseif (isset($_POST['affine'])) {
@@ -22,7 +22,7 @@ class Recherche extends CI_Controller {
         }
         //action pas de requetes
         else{
-            //recupération top annonces
+            $data2['listannonces'] = $this->annonces_model->get_top_annonces(10);
         }
         //pagination
         $this->load->library('pagination');
@@ -31,6 +31,7 @@ class Recherche extends CI_Controller {
         $config['total_rows'] = 200;
         $config['per_page'] = 20;
         $config['page_query_string'] = TRUE;
+        $config['reuse_query_string'] = TRUE;
 
         $this->pagination->initialize($config);
         $data2['pagination'] = $this->pagination->create_links();
