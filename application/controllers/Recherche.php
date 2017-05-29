@@ -19,7 +19,9 @@ class Recherche extends CI_Controller {
         }
         //action si recherche complète
         elseif (isset($_POST['affine'])) {
-            # code...
+            //a faire !!!!!!
+            $recher = array('region' => $_POST['region'] );
+            $data2['listannonces'] = $this->annonces_model->get_annonces_rech(10,$recher);
         }
         //action pas de requetes
         else{
