@@ -9,3 +9,6 @@ $lang['menu_demander'] = "vous devez demander";
 $lang['menu_reservations'] = "réservations" ;
 $lang['menu_demarches'] = 'démarches';
 $lang['menu_recours'] = 'recours';
+$lang['menu_bloc1'] = 'Trouver la destination de vos vacances';
+$lang['menu_bloc2'] = 'Avant de louer, nos conseils';
+$lang['menu_bloc3'] = 'Espace annonceur dépôt et modification d'annonce';
