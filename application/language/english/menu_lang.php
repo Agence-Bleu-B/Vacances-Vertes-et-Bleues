@@ -11,4 +11,4 @@ $lang['menu_demarches'] = 'Process';
 $lang['menu_recours'] = 'Appeal';
 $lang['menu_bloc1'] = 'Find the destination of your vacations';
 $lang['menu_bloc2'] = 'Our advices before renting';
-$lang['menu_bloc3'] = 'Advertisers space ad's posts and changes';
+$lang['menu_bloc3'] = 'Advertisers space ad's post & change';
