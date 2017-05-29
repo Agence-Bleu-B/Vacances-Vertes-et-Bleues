@@ -17,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<nav class="col-xs-12 col-md-4">
 					<ul class="list-unstyled">
 						<li><a href="<?php echo site_url('compte');?>">Espace annonceur</a></li>
-						<li><a href="<?php echo site_url('mentionslegales');?>">Mentions Légales</a></li>
-						<li><a href="<?php echo site_url('cgu');?>">Conditions générales d'utilisations</a></li>
+						<li><a href="<?php echo site_url('legal/mentionslegales');?>">Mentions Légales</a></li>
+						<li><a href="<?php echo site_url('legal/cgu');?>">Conditions générales d'utilisations</a></li>
 					</ul>
 				</nav>
 				<div class="vr hidden-xs hidden-sm">

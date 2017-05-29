@@ -131,7 +131,7 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 #content #conseils p{
 	line-height: 175%;
 }
-#content #detail_annonce h3, #content #inscription h3, #content #conseils h3{
+#content #detail_annonce h3, #content #inscription h3, #content #conseils h3, #content #legal h3{
 	color: #1D8AC9;
 	font-weight: bold;
 	border-bottom: 1px solid #1D8AC9;
