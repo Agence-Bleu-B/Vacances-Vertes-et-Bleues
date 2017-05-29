@@ -1,11 +1,11 @@
 <?php
 //menu header
-$lang['menu_conseils'] = 'our advices';
-$lang['menu_depot'] = 'place an ad';
-$lang['menu_moncompte'] = 'my account';
-$lang['menu_connexion'] = 'connexion';
-$lang['menu_precautions'] = 'precautions';
-$lang['menu_demander'] = "You must ask";
-$lang['menu_reservations'] = "reservations" ;
-$lang['menu_demarches'] = 'steps';
-$lang['menu_recours'] = 'recourse';
+$lang['menu_conseils'] = 'Our advices';
+$lang['menu_depot'] = 'Post an ad';
+$lang['menu_moncompte'] = 'My account';
+$lang['menu_connexion'] = 'Log in';
+$lang['menu_precautions'] = 'Cautions';
+$lang['menu_demander'] = "You have to ask";
+$lang['menu_reservations'] = "Bookings" ;
+$lang['menu_demarches'] = 'Process';
+$lang['menu_recours'] = 'Appeal';
