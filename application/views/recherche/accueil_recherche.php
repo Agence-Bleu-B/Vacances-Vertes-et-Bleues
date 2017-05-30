@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h3>Trouver une location</h3>
 			<form method="post" action="">
 				<div class="visible-xs-block visible-sm-block">
-					<a href="#" class="open">Affiner la recherche <b class="caret"></b></a>
+					<a href="#" class="open">Affiner la recherche <i class="fa fa-caret-down" aria-hidden="true"></i></b></a>
 				</div>
 				<div id="searchContent" class="hidden-xs hidden-sm">
 					<div class="col-xs-12 col-sm-4 col-lg-12">

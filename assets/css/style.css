@@ -15,9 +15,13 @@
 }
 /* Styles utilitaires */
 .btn-vvb{
-
+	color: #fff;
+	background-color: #ADCE4A;
 }
-
+.btn-vvb:hover{
+	color: #fff;
+	background-color: #95B33E;
+}
 /*Styles header */
 
 #bandeau{ /* bandeau connexion */
@@ -131,7 +135,7 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 #content #conseils p{
 	line-height: 175%;
 }
-#content #detail_annonce h3, #content #inscription h3, #content #conseils h3, #content #legal h3, #content #recherche h3, #content #liste_annonces h3{
+#content h3{
 	color: #1D8AC9;
 	font-weight: bold;
 	border-bottom: 1px solid #1D8AC9;
@@ -191,6 +195,16 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 }
 .carousel-control{
 	background-image: none !important;
+}
+
+.nav-tabs a{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: darkgrey;
+	background-color: #eee;
+}
+.nav-tabs a:hover,.nav-tabs a:active, .nav-tabs a:focus, .nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:active, .nav-tabs li.active a:focus{
+	color: #ADCE4A;
 }
 /* Style footer */
 
