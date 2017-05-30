@@ -10,6 +10,9 @@ class Recherche extends CI_Controller {
         $data['title'] = 'vacances vertes et bleues, recherchez vos vacances en ligne';
         $data['description'] = 'Site de locations de vacances directement auprès des propriétaires et des campings. Aussi, un des derniers guide papier à être édité en France et en Belgique.';
 		$this->load->model('annonces_model');
+		$this->load->model('pub_model');
+		$data['pubs'] = $this->pub_model->get_pub(2,'acc');
+		$data['pubs_vvb'] = $this->pub_model->get_pub_vvb(1,'acc');
         //recuperation des types
         $data2['annonce_type'] = $this->annonces_model->get_types();
         //action si requete region seule
