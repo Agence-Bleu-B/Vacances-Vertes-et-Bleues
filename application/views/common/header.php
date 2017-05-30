@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<a href="<?php echo site_url('compte');?>" class="btn" type="button"><?php echo lang('menu_connexion');?></a>
 					</div>
 					<div class="btn-group">
-						<button class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+						<a class="btn" type="button"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>

@@ -149,11 +149,11 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	text-transform: capitalize;
 	font-style: italic;
 }
-#liste_annonces .annonce .infos + div .btn{
+#liste_annonces .annonce div:last-child .btn{
 	color: #fff;
 	background-color: #ADCE4A;
 }
-#liste_annonces .annonce .infos + div .btn:hover{
+#liste_annonces .annonce div:last-child .btn:hover{
 	background-color: #95B33E;
 }
 @media (max-width: 992px) { /* equivalent boostrap col-sm- et inferieurs */
@@ -164,6 +164,11 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 		display: inline-block;
 		vertical-align: middle;
 		float: none;
+	}
+	.col-centered-on-sm{
+	    float: none !important;
+			display: block;
+	    margin: 0 auto;
 	}
 }
 #liste_annonces hr{

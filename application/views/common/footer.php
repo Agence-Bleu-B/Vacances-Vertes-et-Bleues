@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://rawgit.com/CWSpear/bootstrap-hover-dropdown/master/bootstrap-hover-dropdown.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo base_url().'assets/js/searchForm.js'?>"></script>
 <!-- Slider jssor.com -->
 <script src="https://rawgit.com/jssor/slider/master/js/jssor.slider.min.js" charset="utf-8"></script>
 <script>
