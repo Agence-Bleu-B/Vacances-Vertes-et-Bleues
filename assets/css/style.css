@@ -175,10 +175,10 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	    margin: 0 auto;
 	}
 }
-#liste_annonces hr{
+#liste_annonces hr, hr.hr-vvb{
 	border: 2px solid #ADCE4A;
 }
-#liste_annonces hr:last-child{
+#liste_annonces hr:last-child, hr.hr-vvb:last-child{
 	display: none;
 }
 

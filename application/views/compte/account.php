@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</ul>
 
 					<!-- Tab panes -->
-					<div class="tab-content col-md-10 col-md-offset-1">
+					<div class="tab-content col-md-12 col-md-offset-0">
 						<div role="tabpanel" class="tab-pane active" id="home">
 							<h3>Mes Annonces</h3>
 							<button type="button" name="ajoutAnn" class="btn btn-lg btn-vvb center-block"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter une annonce</button>
@@ -36,13 +36,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="panel-heading" role="tab" id="headingOne">
 										<h4 class="panel-title">
 											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-												En cours <span class="badge">0</span>
+												<i class="fa fa-check" aria-hidden="true"></i> Actives <span class="badge">1</span>
 											</a>
 										</h4>
 									</div>
 									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 										<div class="panel-body">
-											Liste annonces en cours
+											<!-- Liste annonces en cours -->
+
+											<div class="row">
+												<div class="col-xs-12 col-md-3">
+													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<br>
+													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
+												</div>
+												<div class="col-xs-12 col-md-6">
+													<h4><strong>Titre</strong></h4>
+													<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+													<small class="text-muted">Annonce n°<strong>461</strong></small>
+												</div>
+												<div class="col-xs-12 col-md-3">
+													<p class="text-info">Cette annoce expire dans : <strong>6 mois</strong></p>
+													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
+													<hr>
+													<a href="#" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<br>
+													<a href="#" class="btn btn-default center-block text-danger"><i class="fa fa-ban" aria-hidden="true"></i> Désactiver</a>
+												</div>
+											</div>
+
+											<hr class="hr-vvb">
+
+											<div class="row">
+												<div class="col-xs-12 col-md-3">
+													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<br>
+													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
+												</div>
+												<div class="col-xs-12 col-md-6">
+													<h4><strong>Titre</strong></h4>
+													<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+													<small class="text-muted">Annonce n°<strong>461</strong></small>
+												</div>
+												<div class="col-xs-12 col-md-3">
+													<p class="text-info">Cette annoce expire dans : <strong>6 mois</strong></p>
+													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
+													<hr>
+													<a href="#" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<br>
+													<a href="#" class="btn btn-default center-block text-danger"><i class="fa fa-ban" aria-hidden="true"></i> Désactiver</a>
+												</div>
+											</div>
+
 										</div>
 									</div>
 								</div>
@@ -50,27 +95,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="panel-heading" role="tab" id="headingTwo">
 										<h4 class="panel-title">
 											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-												En attente <span class="badge">0</span>
+												<i class="fa fa-ban" aria-hidden="true"></i> Inactives <span class="badge">1</span>
 											</a>
 										</h4>
 									</div>
 									<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 										<div class="panel-body">
-											Liste annonces en attente
-										</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingThree">
-										<h4 class="panel-title">
-											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-												Archives <span class="badge">0</span>
-											</a>
-										</h4>
-									</div>
-									<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-										<div class="panel-body">
-											Liste annonces archivées
+											<!-- Liste annonces en attente -->
+
+											<div class="row">
+												<div class="col-xs-12 col-md-3">
+													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<br>
+													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
+												</div>
+												<div class="col-xs-12 col-md-6">
+													<h4><strong>Titre</strong></h4>
+													<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+													<small class="text-muted">Annonce n°<strong>461</strong></small>
+												</div>
+												<div class="col-xs-12 col-md-3">
+													<p class="text-info">Cette annoce expire dans : <strong>6 mois</strong></p>
+													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
+													<hr>
+													<a href="#" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<br>
+													<a href="#" class="btn btn-success center-block"><i class="fa fa-check" aria-hidden="true"></i> Activer</a>
+												</div>
+											</div>
+
 										</div>
 									</div>
 								</div>
@@ -79,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 						<div role="tabpanel" class="tab-pane" id="profile">
 							<h3>Coordonnées</h3>
-							<form class="form-horizontal">
+							<form class="form-horizontal col-md-10 col-md-offset-1">
 
 								<div class="form-group">
 									<label for="inputNom" class="col-sm-2 control-label">Nom <small class="text-danger"><i class="fa fa-asterisk" aria-hidden="true"></i></small></label>
