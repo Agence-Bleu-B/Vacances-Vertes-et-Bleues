@@ -19,9 +19,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h2>Bonjour <?php echo $this->session->userdata('firstname'); ?>,</h2>
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs nav-justified" role="tablist">
-						<li role="presentation" class="active h1"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i><br>Mes Annonces</a></li>
-						<li role="presentation" class=" h1"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i><br>Mon Compte</a></li>
-						<li role="presentation" class=" h1"><a href="#avis" aria-controls="avis" role="tab" data-toggle="tab"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><br>Leurs Avis</a></li>
+						<li role="presentation" class="active h3"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i><br>Mes Annonces</a></li>
+						<li role="presentation" class=" h3"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i><br>Mon Compte</a></li>
+						<li role="presentation" class=" h3"><a href="#avis" aria-controls="avis" role="tab" data-toggle="tab"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><br>Leurs Avis</a></li>
 					</ul>
 
 					<!-- Tab panes -->
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="panel-heading" role="tab" id="headingOne">
 										<h4 class="panel-title">
 											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-												<i class="fa fa-check" aria-hidden="true"></i> Actives <span class="badge">1</span>
+												<i class="fa fa-check" aria-hidden="true"></i> Actives <span class="badge">2</span>
 											</a>
 										</h4>
 									</div>
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 											<div class="row">
 												<div class="col-xs-12 col-md-3">
-													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<img src="http://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
 													<br>
 													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
 												</div>
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 											<div class="row">
 												<div class="col-xs-12 col-md-3">
-													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<img src="http://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
 													<br>
 													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
 												</div>
@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 											<div class="row">
 												<div class="col-xs-12 col-md-3">
-													<img src="https://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
+													<img src="http://placehold.it/350x250" class="img-responsive img-thumbnail center-block">
 													<br>
 													<a href="#" class="btn btn-vvb center-block col-xs-12"><i class="fa fa-picture-o" aria-hidden="true"></i> Gestion des images</a>
 												</div>
