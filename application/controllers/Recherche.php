@@ -36,6 +36,11 @@ class Recherche extends CI_Controller {
         $config['base_url'] = site_url('recherche');
         $config['total_rows'] = 200;
         $config['per_page'] = 10;
+        $config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
+        $config['prev_link'] =  '<i class="fa fa-chevron-left" aria-hidden="true"></i>';
+        $config['first_link']='<i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i>';
+        $config['last_link']='<i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i>';
+
         $config['page_query_string'] = TRUE;
         $config['reuse_query_string'] = TRUE;
 

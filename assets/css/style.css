@@ -129,6 +129,11 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	padding-bottom: 10px;
 }
 
+.pubs
+{
+ padding-top:26px; 
+}
+
 #content #detail_annonce h2{
 	font-weight: bold;
 }
@@ -140,6 +145,12 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	font-weight: bold;
 	border-bottom: 1px solid #1D8AC9;
 }
+
+#content h3 a
+{
+	text-decoration: none;
+}
+
 @media (min-width: 992px) { /* equivalent boostrap col-md- et superieurs */
 	#liste_annonces .annonce img.couv{
 		max-height: 275px;
@@ -206,6 +217,27 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 .nav-tabs a:hover,.nav-tabs a:active, .nav-tabs a:focus, .nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:active, .nav-tabs li.active a:focus{
 	color: #ADCE4A;
 }
+
+/* Pagination */
+
+.pagi_rech
+{
+	font-size: 1.3em;
+	margin-bottom: 25px;
+}
+
+.pagi_rech a
+{
+	padding: 8px;
+	text-decoration: none;
+}
+
+.pagi_rech strong
+{
+	padding: 8px;
+}
+
+
 /* Style footer */
 
 footer.principal{
