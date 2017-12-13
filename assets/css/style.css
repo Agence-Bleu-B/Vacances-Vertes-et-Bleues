@@ -255,3 +255,17 @@ footer.principal > div:last-child{
     width:100%;
     position:absolute;
 }
+
+/*svg 'vip'*/
+#Cal_1{
+	position: absolute;margin-top: 10px;margin-left: 10px;
+}
+#Cal_2 circle{
+	-webkit-animation: cligno 2s infinite; /* Safari 4.0 - 8.0 */
+    animation: cligno 2s infinite;
+}
+@keyframes cligno {
+    0%   {fill: #FABB00;}
+    50% {fill: #FFDB44;}
+    100% {fill: #FABB00;}
+}
