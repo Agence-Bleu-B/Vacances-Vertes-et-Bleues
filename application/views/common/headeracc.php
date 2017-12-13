@@ -73,21 +73,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<a class="btn col-xs-12" href="#cmap" type="button">
 							<i class="fa fa-search" aria-hidden="true"></i>
 							<br>
-							Trouver la destination <br>de vos vacances
+							<?php echo lang('menu_bloc1-1')?> <br><?php echo lang('menu_bloc1-2')?>
 						</a>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<a class="btn col-xs-12" href="<?php echo site_url('conseils');?>" type="button">
 							<i class="fa fa-book" aria-hidden="true"></i>
 							<br>
-							Avant de louer, <br>nos conseils
+							<?php echo lang('menu_bloc2-1')?>, <br><?php echo lang('menu_bloc2-2')?>
 						</a>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<a class="btn col-xs-12" href="<?php echo site_url('compte');?>" type="button">
 							<i class="fa fa-cloud-upload" aria-hidden="true"></i>
 							<br>
-							Espace Annonceurs <br><small>Dépôt et modifications d'annonces</small>
+							<?php echo lang('menu_bloc3-1')?> <br><small><?php echo lang('menu_bloc3-2')?></small>
 						</a>
 					</div>
 				</nav>

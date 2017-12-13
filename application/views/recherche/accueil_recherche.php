@@ -177,7 +177,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="col-xs-6 col-xs-offset-3 col-md-12 col-md-offset-0">
-              <button href="<?php echo site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'];?>" class="btn btn-lg  pull-right col-centered-on-sm">Découvrir</button>
+            	<a href="<?php echo site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'];?>">
+            	<button class="btn btn-lg  pull-right col-centered-on-sm">Découvrir</button>
+            	</a>	
+              	
+            	
             </div>
 
           </div>
@@ -205,7 +209,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </section>
 
 	<div class="row">
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center pagi_rech">
 				<?php echo $pagination; ?>
 		</div>
 	</div>
