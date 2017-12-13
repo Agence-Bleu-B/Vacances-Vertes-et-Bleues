@@ -46,6 +46,7 @@ class Recherche extends CI_Controller {
 
         $this->pagination->initialize($config);
         $data2['pagination'] = $this->pagination->create_links();
+        $data2['vip'] = $this->load->view('common/VIP', NULL, TRUE);
         //cahrgement vues
 		$this->load->view('common/header',$data);
         $this->load->view('recherche/accueil_recherche',$data2);

@@ -125,7 +125,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="col-xs-12 col-md-4"> <!-- photo -->
             <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
-              <img class="img-responsive img-thumbnail center-block couv" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
+            	<?php if($val['formule']== 'vip'){echo $vip;} ?>
+              	<img class="img-responsive img-thumbnail center-block couv" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
             </a>
           </div>
 

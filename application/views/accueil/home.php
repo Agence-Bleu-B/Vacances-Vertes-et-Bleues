@@ -13,21 +13,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="col-xs-12 col-sm-4 col-sm-offset-1 col-lg-2 col-lg-offset-0"> <!-- Regions -->
         <ul class="list-unstyled">
-          <li><a href="<?php echo site_url('recherche');?>?region=6" class="alsace">Grand Est</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=10"  class="aquitaine">Nouvelle Aquitaine</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=1" class="auvergne">Auvergne-Rhône-Alpes</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=2" class="bourgogne">Bourgogne-Franche-Comté</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=3" class="bretagne">Bretagne</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=4" class="centre">Centre-Val de Loire</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=5" class="corse">Corse</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=8" class="ile">Île-de-France </a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=11" class="languedoc">Occitanie</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=7" class="nord">Hauts de France</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=9" class="normandie">Normandie</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=12" class="loire">Pays de la Loire</a></li>
-          <li><a href="<?php echo site_url('recherche');?>?region=13" class="provence">Provence-Alpes-Côte d'Azur</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=6&alsace" class="alsace">Grand Est</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=10&aquitaine"  class="aquitaine">Nouvelle Aquitaine</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=1&auvergne" class="auvergne">Auvergne-Rhône-Alpes</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=2&bourgogne" class="bourgogne">Bourgogne-Franche-Comté</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=3&bretagne" class="bretagne">Bretagne</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=4&centre" class="centre">Centre-Val de Loire</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=5&corse" class="corse">Corse</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=8&ile-de-france" class="ile">Île-de-France </a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=11&languedoc" class="languedoc">Occitanie</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=7&hauts-de-france" class="nord">Hauts de France</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=9&normandie" class="normandie">Normandie</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=12&pays-de-loire" class="loire">Pays de la Loire</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=13&provence" class="provence">Provence-Alpes-Côte d'Azur</a></li>
           <br>
-          <li><a href="<?php echo site_url('recherche');?>?region=14" class="domtom">Dom-Tom</a></li>
+          <li><a href="<?php echo site_url('recherche');?>?region=14&dom-tom" class="domtom">Dom-Tom</a></li>
+          <br>
+          <li><a href="<?php echo site_url('recherche');?>?locations-vacances" class="domtom">Voir toutes</a></li>
         </ul>
       </div>
 
@@ -61,6 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <div class="col-xs-12 col-md-4"> <!-- photo -->
             <a <?php echo 'href="'.site_url("recherche/detail").'?id='.$val['id'].'&'.$val['urlann'].'"';?>>
+              <?php if($val['formule']== 'vip'){echo $vip;} ?>
               <img class="img-responsive img-thumbnail center-block couv" src="<?php echo base_url().$val['photocouv'];?>" alt="<?php echo $val['title'];?>">
             </a>
           </div>
