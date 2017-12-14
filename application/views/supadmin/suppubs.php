@@ -58,7 +58,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									foreach($pubs as $val){ ?>
 										<tr>
 											<td>
-												<?php $img = 'pubs/'.$val['file']; echo img($img,$val['file']);?>
+												<?php $img = 'pubs/'.$val['file'];
+												echo my_img($img,'','img-responsive');
+												?>
 											</td>
 											<td>
 												<?php echo $val['link']; ?>
