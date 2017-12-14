@@ -78,9 +78,17 @@ class Annonces_model extends CI_Model
         //             ->get()
         //             ->result_array();
 
-        $result['images'][0] = 'https://placehold.it/600/450/'; // Remplissage temporaire
-        $result['images'][1] = 'https://unsplash.it/600/450/?random'; // Remplissage temporaire
+        return $result;
+    }
 
+    //recupère les images d'une annonce
+    public function get_images($id)
+    {
+        $result = $this->db->select('file')
+                            ->from('annonce_file')
+                            ->where('id_item',$id)
+                            ->get()
+                            ->result_array();
         return $result;
     }
 

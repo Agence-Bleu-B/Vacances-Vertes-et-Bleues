@@ -7,8 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row"> <!-- top bandeau -->
         <div class="col-xs-12">
-          <a class="btn btn-primary" href="<?php echo site_url('recherche');?>">
-            < Retour</a>
+          <!--<a class="btn btn-primary" href="<?php echo site_url('recherche');?>">
+            < Retour</a>-->
+           
         </div>
         <br><br>
       </div>
@@ -17,6 +18,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="col-xs-12"> <!-- detail annonce -->
       <section id="detail_annonce">
+        <div class="row">  
+          <h2 class="col-md-12"><?php echo $annonce['title']; ?></h2>
+            
+        </div>
+        <div class="row">  
+              <h4 class="col-md-12"><?php echo $annonce['town']; ?></h4>
+        </div>
 
         <div class="row"> <!-- slider + infos + tarifs -->
 
@@ -26,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <ol class="carousel-indicators">
                 <li data-target="#slider" data-slide-to="0" class="active"></li>
 
-                <?php $nbSlides = count($annonce['images']); ?>
+                <?php $nbSlides = count($images); ?>
                 <?php for($i = 1 ; $i < $nbSlides ; $i++): ?>
                 <li data-target="#slider" data-slide-to="<?php echo $i; ?>"></li>
                 <?php endfor; ?>
@@ -34,17 +42,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
-                <?php foreach ($annonce['images'] as $img): ?>
-                <?php if ($img == $annonce['images'][0]): // Si 1ere images ?>
+                <?php foreach ($images as $img): ?>
+                  
+                <?php if ($img == $images[0]): // Si 1ere images ?>
                 <div class="item active">
-                  <img src="<?php echo $img; ?>" alt="<?php echo $annonce['title']; ?>">
+                  <img src="<?php echo img_url("annonces/".$img['file']);?>" alt="<?php echo $annonce['title']; ?>">
                   <div class="carousel-caption">
                     <!-- legende -->
                   </div>
                 </div>
                 <?php else: // Sinon ?>
                 <div class="item">
-                  <img src="<?php echo $img; ?>" alt="<?php echo $annonce['title']; ?>">
+                  <img src="<?php echo img_url("annonces/".$img['file']);?>" alt="<?php echo $annonce['title']; ?>">
                   <div class="carousel-caption">
                     <!-- legende -->
                   </div>
@@ -66,8 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div> <!-- /slider -->
 
           <div class="col-xs-12 col-md-4"> <!-- infos -->
-            <h2><?php echo $annonce['title']; ?></h2>
-            <h4><?php echo $annonce['town']; ?></h4>
+            
             <h3>Informations</h3>
 
             <div class="col-md-6">
@@ -86,43 +94,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
           </div>
-
-          <div class="col-xs-12 col-md-4"> <!-- tarifs -->
-            <h3>À partir de</h3>
-            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12 text-center-on-sm">
-              <h4>Hors Saison</h4>
-              <p>
-                <strong class="h1"><?php echo $annonce['hsnuit']; ?> €</strong>
-                La nuit
-              </p>
-              <p>
-                <strong class="h1"><?php echo $annonce['hsweek']; ?> €</strong>
-                La semaine
-              </p>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12 text-center-on-sm">
-              <h4>Pleine Saison</h4>
-              <p>
-                <strong class="h1"><?php echo $annonce['psnuit']; ?> €</strong>
-                La nuit
-              </p>
-              <p>
-                <strong class="h1"><?php echo $annonce['psweek']; ?> €</strong>
-                La semaine
-              </p>
-            </div>
-          </div>
-
-        </div> <!-- row: slider + infos + tarifs -->
-
-        <div class="row"> <!-- desc + maps + contact -->
-
           <div class="col-xs-12 col-md-4">
             <h3>Description</h3>
             <p class="text-justify">
               <?php echo $annonce['descr_longue']; ?>
             </p>
           </div>
+        </div>
+
+          
+
+        </div> <!-- row: slider + infos + tarifs -->
+        <div class="row"><!-- row image cliquable slider-->
+          <div class="hidden-xs col-md-4">
+            
+                
+                <?//php $nbSlides = count($images); ?>
+                <?php for($i = 0 ; $i < $nbSlides ; $i++): ?>
+                  <?php if($i==0||$i==5){echo '<div class="row">';}?>
+                  
+                <img class="col-md-2 img-slide" data-target="#slider" data-slide-to="<?php echo $i; ?>" src="<?php echo img_url("annonces/".$images[$i]['file']);?>">
+                <?php if($i==4||$i==10||$i==$nbSlides-1){echo '</div>';}?>
+                <?php endfor; ?>        
+          
+          </div>
+          <div class="col-xs-12 col-md-7"> <!-- tarifs -->
+            <h3>À partir de</h3>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6  text-center-on-sm">
+                <h4>Hors Saison</h4>
+                <p>
+                  <strong class="h1"><?php echo $annonce['hsnuit']; ?> €</strong>
+                  La nuit
+                </p>
+                <p>
+                  <strong class="h1"><?php echo $annonce['hsweek']; ?> €</strong>
+                  La semaine
+                </p>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6  text-center-on-sm">
+                <h4>Pleine Saison</h4>
+                <p>
+                  <strong class="h1"><?php echo $annonce['psnuit']; ?> €</strong>
+                  La nuit
+                </p>
+                <p>
+                  <strong class="h1"><?php echo $annonce['psweek']; ?> €</strong>
+                  La semaine
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row"> <!-- desc + maps + contact -->
+
+          
 
           <div class="col-xs-12 col-md-4"> <!-- maps -->
             <h3>Localisation</h3>

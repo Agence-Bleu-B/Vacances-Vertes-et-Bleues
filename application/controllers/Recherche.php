@@ -60,6 +60,7 @@ class Recherche extends CI_Controller {
         $this->load->model('user_model');
 		$data2['annonce_type'] = $this->annonces_model->get_types();
 		$data2['annonce'] = $this->annonces_model->get_annonce($idann);
+        $data2['images']=$this->annonces_model->get_images($idann);
 		$data2['infos_client'] = $this->user_model->get_info($data2['annonce']['id_user']);
         $data['title'] = 'vacances vertes et bleues,'.$data2['annonce']['title'];
         $data['description'] = $data2['annonce']['descr_courte'];

@@ -223,12 +223,23 @@ q
 	font-size: 1.3em;
 	font-style: oblique;
 }
+
+.img-slide
+{
+	margin: 10px 0 0 20px;
+	border:solid 2px #1D8AC9;
+	padding: 0;
+	border-radius: 10px;
+	
+}
 /* Pagination */
 
 .pagi_rech
 {
 	font-size: 1.3em;
 	margin-bottom: 25px;
+	padding: 0;
+
 }
 
 .pagi_rech a
@@ -306,3 +317,4 @@ footer.principal > div:last-child{
     50% {fill: #FFDB44;}
     100% {fill: #FABB00;}
 }
+
