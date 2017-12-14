@@ -218,6 +218,11 @@ header.principal nav .btn:hover, header.principal nav a:hover{
 	color: #ADCE4A;
 }
 
+q
+{
+	font-size: 1.3em;
+	font-style: oblique;
+}
 /* Pagination */
 
 .pagi_rech
